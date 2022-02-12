@@ -3,7 +3,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
+<<<<<<< HEAD
     "types": [ "node" ]
+=======
+    "types": []
+>>>>>>> 33f497f (initial commit)
   },
   "files": [
     "src/main.ts",

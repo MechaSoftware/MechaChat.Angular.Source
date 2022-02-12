@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
+=======
+import { Component } from '@angular/core';
+>>>>>>> 33f497f (initial commit)
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+<<<<<<< HEAD
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
@@ -54,4 +59,10 @@ export class AppComponent implements OnInit {
       }
     }
   }
+=======
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  title = 'app';
+>>>>>>> 33f497f (initial commit)
 }

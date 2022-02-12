@@ -5,22 +5,40 @@
   "projects": {
     "app": {
       "projectType": "application",
+<<<<<<< HEAD
       "schematics": {},
+=======
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+>>>>>>> 33f497f (initial commit)
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
+<<<<<<< HEAD
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
               "path": "./webpack.config.js"
             },
             "outputPath": "dist/app/browser",
+=======
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/app",
+>>>>>>> 33f497f (initial commit)
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+<<<<<<< HEAD
             "inlineStyleLanguage": "css",
             "assets": [
               "src/assets"
@@ -29,17 +47,42 @@
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css",
               "node_modules/ngx-toastr/toastr.css"
+=======
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+>>>>>>> 33f497f (initial commit)
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
+<<<<<<< HEAD
+=======
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+>>>>>>> 33f497f (initial commit)
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+<<<<<<< HEAD
               "optimization": false,
               "outputHashing": "all",
               "sourceMap": true,
@@ -55,6 +98,9 @@
                   "maximumError": "200mb"
                 }
               ]
+=======
+              "outputHashing": "all"
+>>>>>>> 33f497f (initial commit)
             },
             "development": {
               "buildOptimizer": false,
@@ -64,6 +110,7 @@
               "sourceMap": true,
               "namedChunks": true
             }
+<<<<<<< HEAD
           }
         },
         "serve": {
@@ -79,6 +126,22 @@
               "proxyConfig": "proxy-prod.conf.json"
             }
           }
+=======
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "app:build:production"
+            },
+            "development": {
+              "browserTarget": "app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+>>>>>>> 33f497f (initial commit)
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -93,12 +156,17 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+<<<<<<< HEAD
             "inlineStyleLanguage": "css",
+=======
+            "inlineStyleLanguage": "scss",
+>>>>>>> 33f497f (initial commit)
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
@@ -173,6 +241,12 @@
             }
           },
           "defaultConfiguration": "production"
+=======
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+>>>>>>> 33f497f (initial commit)
         }
       }
     }

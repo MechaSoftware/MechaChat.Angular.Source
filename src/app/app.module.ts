@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+<<<<<<< HEAD
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -63,3 +64,22 @@ import { MainNavbarComponent } from './components/views/shared/main-navbar/main-
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+=======
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+>>>>>>> 33f497f (initial commit)

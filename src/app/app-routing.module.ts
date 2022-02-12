@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Injectable, NgModule } from '@angular/core';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { Observable, of } from 'rxjs';
@@ -49,3 +50,15 @@ const routes: Routes = [
 export class RootRoutingModule {
   static components = [HomeComponent, Error404Component];
 }
+=======
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+>>>>>>> 33f497f (initial commit)

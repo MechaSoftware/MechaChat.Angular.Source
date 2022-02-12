@@ -8,6 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+<<<<<<< HEAD
 function bootstrap() {
   platformBrowserDynamic()
     .bootstrapModule(AppModule)
@@ -19,3 +20,7 @@ if (document.readyState === 'complete') {
 } else {
   document.addEventListener('DOMContentLoaded', bootstrap);
 }
+=======
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+>>>>>>> 33f497f (initial commit)
