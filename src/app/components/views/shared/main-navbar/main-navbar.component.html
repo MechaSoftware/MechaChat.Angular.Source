@@ -1,0 +1,50 @@
+<mat-toolbar>
+  <span class="navbar-brand-title">MechaChat</span>
+  <span class="navbar-spacer"></span>
+  <div class="navbar-buttons">
+    <a
+      *ngIf="this.currentPage === 'mechachat-home'"
+      mat-flat-button
+      color="primary"
+      href="/"
+      >Home</a
+    >
+    <a
+      *ngIf="this.currentPage !== 'mechachat-home'"
+      mat-stroked-button
+      color="primary"
+      href="/"
+      >Home</a
+    >
+
+    <a
+      *ngIf="this.currentPage === 'mechachat-plus'"
+      mat-flat-button
+      color="primary"
+      href="/plus"
+      disabled="true"
+      >MechaChat +</a
+    >
+    <a
+      *ngIf="this.currentPage !== 'mechachat-plus'"
+      mat-stroked-button
+      color="primary"
+      href="/plus"
+      disabled="true"
+      >MechaChat +</a
+    >
+
+    <a mat-stroked-button color="primary" disabled="true" (click)="({})">
+      Downloads
+    </a>
+    <a mat-stroked-button color="primary" disabled>Developers</a>
+    <a
+      mat-stroked-button
+      matBadge="BETA"
+      matBadgePosition="after"
+      color="primary"
+      href="/auth/login"
+      >{{ this.isLoggedIn === true ? "Open MechaChat" : "Login Here" }}</a
+    >
+  </div>
+</mat-toolbar>
