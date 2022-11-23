@@ -1,0 +1,258 @@
+<div class="container-fluid" id="container-fluid">
+  <div class="mechachat-app-topbar">
+    <div class="mechachat-app-topbar-left" [matMenuTriggerFor]="myUserMenu">
+      <div class="mechachat-app-topbar-left-avatar">
+        <div *ngIf="avatar == 'default'; then defaultPic; else customPic"></div>
+
+        <ng-template #defaultPic>
+          <img
+            class="my-avatar-img-40"
+            id="my-avatar-img-40"
+            src="https://res.cloudinary.com/mechachat/image/upload/v1657204001/MechaChat%20Solutions/avatars/a_default.png"
+          /><span
+            class="my-avatar-img-40-mood"
+            aria-hidden="true"
+            matTooltip="{{ mood }}"
+            matTooltipPosition="below"
+            matTooltipClass="my-avatar-img-40-mood-tooltip"
+            id="my-avatar-img-40-mood"
+            ><span
+              class="my-avatar-img-40-mood-icon"
+              id="my-avatar-img-40-mood-icon"
+            ></span
+          ></span>
+        </ng-template>
+
+        <ng-template #customPic>
+          <img
+            class="my-avatar-img-40"
+            id="my-avatar-img-40"
+            src="https://res.cloudinary.com/mechachat/image/upload/v1657204001/MechaChat%20Solutions/avatars/{{
+            identifier
+          }}/{{ avatar }}"
+          /><span
+            class="my-avatar-img-40-mood"
+            aria-hidden="true"
+            matTooltip="{{ mood }}"
+            matTooltipPosition="below"
+            matTooltipClass="my-avatar-img-40-mood-tooltip"
+            id="my-avatar-img-40-mood"
+            ><span
+              class="my-avatar-img-40-mood-icon"
+              id="my-avatar-img-40-mood-icon"
+            ></span
+          ></span>
+        </ng-template>
+      </div>
+
+      <span class="mechachat-app-topbar-left-name"
+        >{{ name }}<br /><span class="mechachat-app-topbar-left-name-discrim"
+          >{{ discriminator }}
+          <span
+            ><span id="custom-status-message"> {{ statusMsg }}</span></span
+          ></span
+        ></span
+      >
+
+      <mat-menu #myUserMenu="matMenu" class="my-user-profile-dropdown">
+        <button mat-menu-item class="my-user-profile-username-copy">
+          Copy Username
+        </button>
+        <button mat-menu-item (click)="openChangeStatusDialog()">
+          Change Status
+        </button>
+        <button mat-menu-item (click)="showSettingsScreen()">Settings</button>
+        <mat-divider></mat-divider>
+        <a mat-menu-item class="btn-red" href="/auth/logout">Log out</a>
+      </mat-menu>
+    </div>
+    <div class="mechachat-app-topbar-right"></div>
+  </div>
+  <div class="mechachat-app-sidebar">
+    <div
+      class="mechachat-app-sidebar-top"
+      matTooltip="Dashboard"
+      matTooltipPosition="left"
+      matTooltipClass="mechachat-app-home-dashboard-btn-tooltip"
+    >
+      <button
+        class="mechachat-app-home-dashboard-btn"
+        href="/app/dashboard/home"
+      ></button>
+    </div>
+
+    <div class="guild-container mechachat-app-sidebar-guilds">
+      <div class="guild-container-separator-top"></div>
+
+      <div class="mechachat-app-sidebar-guilds-list-shadow"></div>
+
+      <div class="mechachat-app-sidebar-guilds-list">
+        <div *ngIf="this.hasDevRole">
+          <div
+            class="guild unread"
+            matTooltip="Test Server 1"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS1</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 2"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS2</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 3"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS3</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 4"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS4</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 5"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS5</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 6"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS6</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 7"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS7</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 8"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS8</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 9"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS9</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 10"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS10</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 11"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS11</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 12"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS12</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 13"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS13</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 14"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS14</span>
+          </div>
+
+          <div
+            class="guild unread"
+            matTooltip="Test Server 15"
+            matTooltipPosition="before"
+          >
+            <!--<img class="guild-img-40" src="./assets/avatar_xnacly.jpg">-->
+            <span class="guild-img-40">TS15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mechachat-app-sidebar-guilds-shadow"></div>
+    </div>
+
+    <div class="mechachat-app-sidebar-controls">
+      <div class="guild-container-separator"></div>
+
+      <div class="guild" matTooltip="Bot Discovery" matTooltipPosition="before">
+        <span class="guild-img-40">
+          <span class="material-icons-outlined"> smart_toy </span>
+        </span>
+        <span class="pill"></span>
+      </div>
+
+      <div
+        class="guild add-server-btn"
+        matTooltip="Add a Server"
+        matTooltipPosition="before"
+        matTooltipClass="add-server-btn-tooltip"
+      >
+        <span class="guild-img-40">
+          <span class="material-icons-outlined"> add_circle_outline </span>
+        </span>
+        <span class="pill"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mechachat-app-body">
+    <ng-content></ng-content>
+  </div>
+</div>

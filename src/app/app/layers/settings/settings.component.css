@@ -1,0 +1,68 @@
+.settings-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(44, 44, 44, 0.301);
+  color: white;
+}
+
+.settings-screen-tabs {
+  position: absolute;
+  width: 85vw;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.settings-screen-tabs .mat-tab-label, .settings-screen-tabs .mat-tab-label-content {
+  font-size: 30px !important;
+}
+
+.settings-tab-content {
+  position: relative;
+  margin-top: 16px;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--app-settings-screen-border);
+
+  height: calc(80vh);
+  width: calc(85vw - 2px);
+}
+
+app-theme-appearance {
+  position: absolute;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  height: 99%;
+  width: 99%;
+
+  padding: 5px;
+}
+
+app-theme-appearance::-webkit-scrollbar-track
+{
+  position: absolute;
+  border-radius: 5px;
+  background-color: var(--app-scrollbar-track);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  scroll-margin: 10px;
+}
+
+app-theme-appearance::-webkit-scrollbar {
+	width: 6px;
+  border-radius: 5px;
+}
+
+app-theme-appearance::-webkit-scrollbar-thumb {
+	background-color: var(--app-scrollbar-thumb);
+  border-radius: 5px;
+}

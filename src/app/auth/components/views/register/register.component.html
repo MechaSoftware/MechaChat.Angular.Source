@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="center-content">
+    <img class="brand-logo" src="assets/brand-logo.png" />
+
+    <form (ngSubmit)="registerUser()" [formGroup]="formGroup" class="form">
+      <mat-form-field appearance="legacy" class="form-item isTextBox">
+        <mat-label>Email Address</mat-label>
+        <input
+          matInput
+          class="form-control"
+          placeholder="user@domain.tld"
+          id="email"
+          formControlName="email"
+          type="email"
+          autocomplete="email"
+          required
+        />
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error
+          *ngIf="
+            !formGroup.controls['email'].valid &&
+            formGroup.controls['email'].touched
+          "
+        >
+          {{ getErrorEmail() }}
+        </mat-error> </mat-form-field
+      ><br />
+      <mat-form-field appearance="legacy" class="form-item isTextBox">
+        <mat-label>Username</mat-label>
+        <input
+          matInput
+          class="form-control"
+          id="username"
+          formControlName="username"
+          type="text"
+          autocomplete="none"
+          required
+        />
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error
+          *ngIf="
+            !formGroup.controls['username'].valid &&
+            formGroup.controls['username'].touched
+          "
+        >
+          {{ getErrorUsername() }}
+        </mat-error> </mat-form-field
+      ><br />
+      <mat-form-field appearance="legacy" class="form-item isTextBox">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          class="form-control"
+          id="password"
+          formControlName="password"
+          type="password"
+          autocomplete="new-password"
+          required
+        />
+        <mat-icon matSuffix>vpn_key</mat-icon>
+        <mat-error
+          *ngIf="
+            !formGroup.controls['password'].valid &&
+            formGroup.controls['password'].touched
+          "
+        >
+          {{ getErrorPassword() }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-item isTextBox" appearance="legacy">
+        <mat-label>Date of Birth</mat-label>
+        <input
+          matInput
+          [matDatepicker]="dob"
+          formControlName="dateofbirth"
+          required
+        />
+        <mat-datepicker-toggle matSuffix [for]="dob"></mat-datepicker-toggle>
+        <mat-datepicker #dob></mat-datepicker>
+        <mat-error
+          *ngIf="
+            !formGroup.controls['dateofbirth'].valid &&
+            formGroup.controls['dateofbirth'].touched
+          "
+        >
+          {{ getErrorDOB() }}
+        </mat-error>
+      </mat-form-field>
+
+      <div class="buttons">
+        <!--<button class="button form-submit" mat-flat-button color="primary" type="submit" [disabled]="formGroup.invalid">Register</button>-->
+        <button
+          class="button form-submit"
+          mat-flat-button
+          color="primary"
+          type="submit"
+          [disabled]="formGroup.invalid"
+        >
+          Register
+        </button>
+        <a
+          class="button loginBtn"
+          mat-flat-button
+          color="warn"
+          href="/auth/login"
+          >Sign In</a
+        >
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="center-content">
+    <img class="brand-logo" src="assets/brand-logo.png" />
+
+    <form (ngSubmit)="authenticateUser()" [formGroup]="formGroup" class="form">
+      <mat-form-field
+        appearance="legacy"
+        class="form-item isTextBox"
+        color="blue"
+      >
+        <mat-label>Email Address</mat-label>
+        <input
+          matInput
+          class="form-control"
+          placeholder="user@domain.tld"
+          id="email"
+          formControlName="email"
+          type="email"
+          (keyup.enter)="authenticateUser()"
+          required
+        />
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error
+          *ngIf="
+            !formGroup.controls['email'].valid &&
+            formGroup.controls['email'].touched
+          "
+        >
+          {{ getErrorEmail() }}
+        </mat-error> </mat-form-field
+      ><br />
+      <mat-form-field appearance="legacy" class="form-item isTextBox">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          class="form-control"
+          id="password"
+          formControlName="password"
+          type="password"
+          (keyup.enter)="authenticateUser()"
+          required
+        />
+        <mat-icon matSuffix>vpn_key</mat-icon>
+        <mat-error
+          *ngIf="
+            !formGroup.controls['password'].valid &&
+            formGroup.controls['password'].touched
+          "
+        >
+          {{ getErrorPassword() }}
+        </mat-error>
+      </mat-form-field>
+
+      <div class="buttons">
+        <button
+          class="button form-submit"
+          mat-flat-button
+          color="primary"
+          [disabled]="formGroup.invalid"
+        >
+          Sign In
+        </button>
+        <!--<a
+          class="button registerBtn"
+          mat-flat-button
+          color="warn"
+          href="/auth/register"
+          >Register</a
+        >-->
+        <a
+          class="button registerBtn disabled disable"
+          mat-flat-button
+          color="warn"
+          [disabled]="true"
+          >Register</a
+        >
+      </div>
+    </form>
+  </div>
+</div>

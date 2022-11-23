@@ -1,0 +1,56 @@
+<div class="theme-appearance-content">
+  <div class="themes-group">
+    <h1 class="default-themes-text">Choose your theme!</h1>
+    <br />
+
+    <div *ngIf="this.selectedColorTheme === null">
+      <mat-progress-spinner
+        class="themes-group-spinner"
+        color="accent"
+        mode="indeterminate"
+      >
+      </mat-progress-spinner>
+    </div>
+
+    <ul
+      class="cards"
+      id="theme-cards-list"
+      *ngIf="this.selectedColorTheme !== null"
+    >
+      <li class="cards_item" *ngFor="let theme of colorThemes">
+        <div
+          class="card"
+          style="border: solid 2px {{ theme.color }}; background-color: {{
+            theme.color
+          }};"
+        >
+          <div
+            class="card_color"
+            style="background-color: {{
+              theme.color
+            }}; width: 100% !important; height: 30px !important;"
+          ></div>
+          <div class="card_content">
+            <h2 class="card_name">{{ theme.name }}</h2>
+            <button
+              class="btn card_btn"
+              (click)="this.selectTheme(theme.id)"
+              *ngIf="this.selectedColorTheme !== theme.id"
+            >
+              SELECT THEME
+            </button>
+            <button
+              class="btn card_btn disabled"
+              *ngIf="this.selectedColorTheme === theme.id"
+              disabled
+            >
+              SELECTED
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <br />
+  <!--<h1 class="custom-themes-text">Custom Themes Coming Soon!</h1>-->
+</div>
