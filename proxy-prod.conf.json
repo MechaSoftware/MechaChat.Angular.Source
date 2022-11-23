@@ -1,0 +1,24 @@
+{
+    "/api/**": {
+      "target": {
+        "host": "api.mecha.chat",
+        "protocol": "https:",
+        "port": 443
+      },
+      "pathRewrite": { "^/api": "" },
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    },
+    "/cdn/**": {
+      "target": {
+        "host": "cdn.mecha.chat",
+        "protocol": "https:",
+        "port": 443
+      },
+      "pathRewrite": { "^/cdn": "" },
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+}
