@@ -1,3 +1,4 @@
+# MechaChat Angular App Source Code
 UNDER DEVELOPMENT
 #
 FOR TESTING PURPOSES ONLY
