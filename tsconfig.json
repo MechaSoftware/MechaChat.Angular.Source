@@ -18,6 +18,7 @@
     "importHelpers": true,
     "target": "es2017",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "module": "es2022",
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "lib": [
@@ -32,6 +33,15 @@
       "dom"
     ]
 >>>>>>> 33f497f (initial commit)
+=======
+    "module": "es2022",
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "types": ["jquery"]
+>>>>>>> 651e671 (Update design + Start of communties)
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -9,6 +9,9 @@ if (environment.production) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 651e671 (Update design + Start of communties)
 function bootstrap() {
   platformBrowserDynamic()
     .bootstrapModule(AppModule)
@@ -20,7 +23,10 @@ if (document.readyState === 'complete') {
 } else {
   document.addEventListener('DOMContentLoaded', bootstrap);
 }
+<<<<<<< HEAD
 =======
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 >>>>>>> 33f497f (initial commit)
+=======
+>>>>>>> 651e671 (Update design + Start of communties)

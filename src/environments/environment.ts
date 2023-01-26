@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const environment = {
   production: false,
   environmentName: 'Development',
@@ -10,9 +11,14 @@ export const environment = {
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+=======
+>>>>>>> 651e671 (Update design + Start of communties)
 export const environment = {
-  production: false
+  production: false,
+  environmentName: 'Development',
+  baseURL: "https://api.mecha.chat/v1"
 };
+<<<<<<< HEAD
 
 /*
  * For easier debugging in development mode, you can import the following file
@@ -23,3 +29,5 @@ export const environment = {
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
 >>>>>>> 33f497f (initial commit)
+=======
+>>>>>>> 651e671 (Update design + Start of communties)

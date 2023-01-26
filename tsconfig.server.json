@@ -2,6 +2,10 @@
 {
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
+<<<<<<< HEAD
+=======
+    "module": "commonjs",
+>>>>>>> 651e671 (Update design + Start of communties)
     "outDir": "./out-tsc/server",
     "target": "es2019",
     "types": [

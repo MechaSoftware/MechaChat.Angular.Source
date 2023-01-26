@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
   width: 100%;
   min-height: 100%;
@@ -109,3 +110,249 @@ body {
 #control-bar-minus:hover {
   background-color: #494949;
 }
+=======
+html {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  position: absolute;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#mechachat-root.is_windows > [class^=app-] {
+  position: relative !important;
+  top: 25px !important;
+  margin-top: 25px !important;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+
+  padding: 0px;
+  height: calc(100vh - 25px) !important;
+}
+
+#mechachat-root.is_macos > [class^=app-] {
+  position: relative !important;
+  top: 25px !important;
+  margin-top: 25px !important;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+
+  padding: 0px;
+  height: calc(100vh - 25px) !important;
+}
+
+#control-bar {
+  position: relative;
+  width: 100%;
+  height: 25px !important;
+  top: 0px;
+  margin-top: 0px;
+  background-color: rgb(44, 44, 44);
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  cursor: default !important;
+}
+
+#control-bar-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  -webkit-user-select: none;
+  -webkit-app-region: no-drag;
+}
+
+#control-bar-buttons, #control-bar-buttons * {
+  cursor: pointer !important;
+}
+
+#control-bar-brand {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-user-select: none;
+  -webkit-app-region: no-drag;
+  font-family: TruenoBold !important;
+  font-weight: 900;
+  font-size: 11px;
+  color: white;
+}
+
+#control-bar-close {
+  position: relative;
+  bottom: 0px;
+  height: 25px !important;
+  font-family: Garamond, "Apple Garamond";
+  font-size: 25px;
+  color: white;
+  font-weight: bolder !important;
+  cursor: pointer;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+#control-bar-close:hover {
+  background-color: rgb(255, 44, 44);
+}
+
+#control-bar-max {
+  position: relative;
+  bottom: 0px;
+  height: 25px !important;
+  font-family: Garamond, "Apple Garamond";
+  font-size: 25px;
+  color: white;
+  font-weight: bolder !important;
+  cursor: pointer;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+#control-bar-max:hover {
+  background-color: #494949;
+}
+
+#control-bar-minus {
+  position: relative;
+  bottom: 0px;
+  height: 25px !important;
+  font-family: Garamond, "Apple Garamond";
+  font-size: 25px;
+  color: white;
+  font-weight: bolder !important;
+  cursor: pointer;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+#control-bar-minus:hover {
+  background-color: #494949;
+}
+
+#control-bar-brand-mac {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+  -webkit-app-region: no-drag;
+  font-family: TruenoBold !important;
+  font-weight: 900;
+  font-size: 11px;
+  color: white;
+}
+
+.control-bar-button-mac {
+  position: relative;
+  height: 13px !important;
+  width: 13px !important;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 5px;
+  float: left;
+}
+
+.control-bar-button-mac, .control-bar-button-mac * {
+  cursor: pointer !important;
+}
+
+#control-bar-buttons-mac {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  -webkit-user-select: none;
+  -webkit-app-region: no-drag;
+}
+
+#control-bar-close-mac {
+  background: #FF5D5B;
+  border: 1px solid #CF544D;
+  font-family: Garamond, "Apple Garamond";
+  color: black;
+  font-weight: bolder !important;
+}
+
+#control-bar-close-mac:hover {
+  background: #ff7370;
+  border: 1px solid #CF544D;
+  font-family: Garamond, "Apple Garamond";
+  color: black;
+  font-weight: bolder !important;
+}
+
+#control-bar-close-mac svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  transform: translate(-50%, -50%);
+}
+
+#control-bar-minus-mac {
+  background: #FFBB39;
+  border: 1px solid #CFA64E;
+  font-family: Garamond, "Apple Garamond";
+  color: black;
+  font-weight: bolder !important;
+}
+
+#control-bar-minus-mac:hover {
+  background: #ffc75f;
+  border: 1px solid #CFA64E;
+  font-family: Garamond, "Apple Garamond";
+  color: black;
+  font-weight: bolder !important;
+}
+
+#control-bar-minus-mac svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  transform: translate(-50%, -50%);
+}
+
+#control-bar-max-mac {
+  background: #00CD4E;
+  border: 1px solid #0EA642;
+  font-family: Garamond, "Apple Garamond";
+  color: black;
+  font-weight: bolder !important;
+}
+
+#control-bar-max-mac:hover {
+  background: #64ce8c;
+  border: 1px solid #0EA642;
+  font-family: Garamond, "Apple Garamond";
+  color: black;
+  font-weight: bolder !important;
+}
+
+#control-bar-max-mac svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+}
+>>>>>>> 651e671 (Update design + Start of communties)

@@ -1,0 +1,37 @@
+<div mat-dialog>
+  <h1 mat-dialog-title>Create New Community</h1>
+  <div mat-dialog-content class="create-community-content">
+    <mat-form-field appearance="fill" class="dialog-input">
+      <mat-label class="isTextBox">Community Name</mat-label>
+      <input
+        matInput
+        #communityName
+        class="isTextBox"
+        maxlength="50"
+        required="true"
+      />
+      <mat-hint align="end">{{communityName.value.length}} / 50</mat-hint>
+    </mat-form-field>
+    <div class="dialog-input">
+      <mat-label>Community Visibility:</mat-label>
+      <mat-radio-group [(ngModel)]="visibility">
+        <mat-radio-button value="public"> Public </mat-radio-button>
+        <mat-radio-button value="unlisted"> Unlisted </mat-radio-button>
+      </mat-radio-group>
+      <br />
+      <br />
+      <mat-hint
+        ><span style="color: rgb(0, 255, 0)"><b>Public</b></span
+        >: Anyone can join the community (via public communities page | WIP)<br /><span
+          style="color: rgb(117, 117, 117)"
+          ><b>Unlisted</b></span
+        >: Users will need to enter the invite code in order to join the
+        community.</mat-hint
+      >
+    </div>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-button>Create Community</button>
+    <button mat-button mat-dialog-close>Cancel</button>
+  </div>
+</div>

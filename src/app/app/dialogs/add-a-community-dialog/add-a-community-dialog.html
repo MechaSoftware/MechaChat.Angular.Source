@@ -1,0 +1,26 @@
+<div mat-dialog>
+  <h1 mat-dialog-title>Add a Community</h1>
+  <div mat-dialog-content class="add-server-content">
+    <mat-form-field appearance="fill" class="dialog-input">
+      <mat-label class="isTextBox">Enter the communities invite code</mat-label>
+      <input matInput class="isTextBox" />
+    </mat-form-field>
+    <button
+      mat-icon-button
+      matTooltip="Join Community"
+      aria-label="Join Community Button"
+    >
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button
+      mat-button
+      mat-dialog-close
+      (click)="createANewCommunityDialogOpen()"
+    >
+      Create a Community
+    </button>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
+</div>
