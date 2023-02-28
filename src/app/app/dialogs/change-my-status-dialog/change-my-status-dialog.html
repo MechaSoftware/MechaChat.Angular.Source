@@ -1,69 +1,3 @@
-<<<<<<< HEAD
-<div mat-dialog>
-  <h1 mat-dialog-title>Change Status</h1>
-  <div mat-dialog-content>
-    <mat-form-field appearance="outline" class="dialog-input">
-      <mat-label>Current: {{ this.statusStr }}</mat-label>
-      <mat-select [(value)]="selectedStatus">
-        <mat-option value="1"
-          ><span style="color: #3ba55d"
-            ><i
-              class="fi fi-sr-play"
-              style="position: relative; margin-right: 10px; top: 2px"
-            ></i>
-            <b>Online</b></span
-          ></mat-option
-        >
-        <mat-option value="0">
-          <span style="color: #747f8d"
-            ><i
-              class="fi fi-sr-play"
-              style="position: relative; margin-right: 10px; top: 2px"
-            ></i>
-            <b>Invisible</b></span
-          ></mat-option
-        >
-        <mat-option value="2"
-          ><span style="color: #ed4244"
-            ><i
-              class="fi fi-sr-play"
-              style="position: relative; margin-right: 10px; top: 2px"
-            ></i>
-            <b>Do Not Disturb</b></span
-          ></mat-option
-        >
-        <mat-option value="3"
-          ><span style="color: #faa819"
-            ><i
-              class="fi fi-sr-play"
-              style="position: relative; margin-right: 10px; top: 2px"
-            ></i>
-            <b>Idle</b></span
-          ></mat-option
-        >
-      </mat-select>
-    </mat-form-field>
-    <br />
-    <mat-form-field appearance="outline" class="dialog-input">
-      <mat-label>What is your mood? Current: {{ this.selectedMood }}</mat-label>
-      <mat-select [(value)]="selectedMood">
-        <mat-option value="Happy">😃| Happy</mat-option>
-        <mat-option value="Angry">😠| Angry</mat-option>
-        <mat-option value="Sad">😢| Sad</mat-option>
-        <mat-option value="Sleeping">😴| Sleeping</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="dialog-input">
-      <mat-label class="isTextBox">Custom Status Message</mat-label>
-      <input matInput class="isTextBox" [(ngModel)]="selectedStatusMsg" />
-    </mat-form-field>
-  </div>
-  <div mat-dialog-actions class="dialog-actions">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button mat-dialog-close (click)="saveNewStatus()">Save</button>
-  </div>
-</div>
-=======
 <div mat-dialog>
   <h1 mat-dialog-title>Change Status</h1>
   <div mat-dialog-content>
@@ -131,4 +65,3 @@
     <button mat-button mat-dialog-close>Cancel</button>
   </div>
 </div>
->>>>>>> 651e671 (Update design + Start of communties)
