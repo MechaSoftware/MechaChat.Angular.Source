@@ -20,18 +20,12 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   it(`should have as title 'app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('app');
   });
 
->>>>>>> 33f497f (initial commit)
-=======
->>>>>>> 651e671 (Update design + Start of communties)
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
