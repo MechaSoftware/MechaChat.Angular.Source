@@ -1,0 +1,13 @@
+.add-server-content[mat-dialog-content] {
+    display: flex;
+}
+
+.add-server-content[mat-dialog-content] mat-form-field {
+    width: 95%;
+}
+
+.add-server-content[mat-dialog-content] button {
+    position: relative;
+    margin-left: 15px;
+    margin-top: 7px;
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar-spacer {
   flex: 1 1 auto;
 }
@@ -16,3 +17,23 @@ a {
   background-image: url('/assets/white-logo.png');
   background-size: 24px auto;
 }
+=======
+.navbar-spacer {
+  flex: 1 1 auto;
+}
+
+.navbar-buttons {
+  margin: 8px 0px 8px 0;
+  display: table-cell;
+  width: auto;
+}
+
+a {
+  margin-left: 8px;
+}
+
+.navbar-brand-img {
+  background-image: url('https://res.cloudinary.com/mechachat/image/upload/v1670291669/MechaChat%20Solutions/assets/white-logo.png');
+  background-size: 24px auto;
+}
+>>>>>>> 651e671 (Update design + Start of communties)

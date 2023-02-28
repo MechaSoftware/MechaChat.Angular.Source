@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .center-container {
   position: absolute;
   top: 50%;
@@ -5,3 +6,12 @@
   width: 50%;
   height: auto;
 }
+=======
+.center-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: auto;
+}
+>>>>>>> 651e671 (Update design + Start of communties)

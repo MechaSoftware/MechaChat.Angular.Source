@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container-fluid" id="container-fluid">
   <div class="mechachat-app-topbar">
     <div class="mechachat-app-topbar-left" [matMenuTriggerFor]="myUserMenu">
@@ -256,3 +257,167 @@
     <ng-content></ng-content>
   </div>
 </div>
+=======
+<div class="container-fluid" id="container-fluid">
+  <div class="mechachat-app-topbar">
+    <div class="mechachat-app-topbar-left" [matMenuTriggerFor]="myUserMenu">
+      <div class="mechachat-app-topbar-left-avatar">
+        <div *ngIf="avatar == 'default'; then defaultPic; else customPic"></div>
+
+        <ng-template #defaultPic>
+          <img
+            class="my-avatar-img-40"
+            id="my-avatar-img-40"
+            src="https://res.cloudinary.com/mechachat/image/upload/v1657204001/MechaChat%20Solutions/avatars/a_default.png"
+          /><span
+            class="my-avatar-img-40-mood"
+            aria-hidden="true"
+            matTooltip="{{ mood }}"
+            matTooltipPosition="below"
+            matTooltipClass="my-avatar-img-40-mood-tooltip"
+            id="my-avatar-img-40-mood"
+            ><span
+              class="my-avatar-img-40-mood-icon"
+              id="my-avatar-img-40-mood-icon"
+            ></span
+          ></span>
+        </ng-template>
+
+        <ng-template #customPic>
+          <img
+            class="my-avatar-img-40"
+            id="my-avatar-img-40"
+            src="https://res.cloudinary.com/mechachat/image/upload/v1657204001/MechaChat%20Solutions/avatars/{{
+            identifier
+          }}/{{ avatar }}"
+          /><span
+            class="my-avatar-img-40-mood"
+            aria-hidden="true"
+            matTooltip="{{ mood }}"
+            matTooltipPosition="below"
+            matTooltipClass="my-avatar-img-40-mood-tooltip"
+            id="my-avatar-img-40-mood"
+            ><span
+              class="my-avatar-img-40-mood-icon"
+              id="my-avatar-img-40-mood-icon"
+            ></span
+          ></span>
+        </ng-template>
+      </div>
+
+      <span class="mechachat-app-topbar-left-name"
+        >{{ name }}<br /><span class="mechachat-app-topbar-left-name-discrim"
+          >{{ discriminator }}
+          <span
+            ><span id="custom-status-message"> {{ statusMsg }}</span></span
+          ></span
+        ></span
+      >
+
+      <mat-menu #myUserMenu="matMenu" class="my-user-profile-dropdown">
+        <button mat-menu-item class="my-user-profile-username-copy">
+          <span class="material-icons"> content_copy </span> &nbsp; Copy
+          Username
+        </button>
+        <button mat-menu-item (click)="openChangeStatusDialog()">
+          <span class="material-icons"> send </span> &nbsp; Change Status
+        </button>
+        <button mat-menu-item (click)="showSettingsScreen()">
+          <span class="material-icons"> settings </span> &nbsp; Settings
+        </button>
+        <mat-divider></mat-divider>
+        <a mat-menu-item class="btn-red" href="/auth/logout"
+          ><span class="material-icons"> logout </span> &nbsp; Log out</a
+        >
+      </mat-menu>
+    </div>
+    <div class="mechachat-app-topbar-right"></div>
+  </div>
+  <div class="mechachat-app-sidebar">
+    <div
+      class="mechachat-app-sidebar-top"
+      matTooltip="Dashboard"
+      matTooltipPosition="left"
+      matTooltipClass="mechachat-app-home-dashboard-btn-tooltip"
+    >
+      <img
+        class="mechachat-app-home-dashboard-btn"
+        click="/app/dashboard/home"
+        onclick=""
+        src="https://res.cloudinary.com/mechachat/image/upload/v1670291669/MechaChat%20Solutions/assets/gradient-logo.png"
+      />
+    </div>
+
+    <div class="community-container mechachat-app-sidebar-communities">
+      <div class="community-container-separator-top"></div>
+
+      <div class="mechachat-app-sidebar-communities-list-shadow"></div>
+
+      <div class="mechachat-app-sidebar-communities-list">
+        <div *ngIf="this.hasDevRole">
+          <div
+            *ngFor="let community of this.hardcoded_communities;"
+            class="community"
+            [attr.ring-data]="community.mentions >= 1 && community.unread === true ? 'mentioned' : '' || community.mentions === 0 && community.unread === true ? 'unread' : '' || community.active === true ? 'active' : ''"
+            id="{{community.id}}"
+            matTooltip="{{community.name}} {{community.mentions >= 1 && community.unread === true ? ' | ' + community.mentions.toString() + ' Mentions' : '' || community.mentions === 0 && community.unread === true ? ' | Unread' : '' || community.active === true ? ' | Active' : ''}}"
+            matTooltipPosition="before"
+          >
+            <img
+              *ngIf="community.icon != null"
+              class="community-img-40"
+              src="https://res.cloudinary.com/mechachat/image/upload/v1673579209/MechaChat%20Solutions/communities/{{
+                community.id
+              }}/{{ community.icon }}"
+            />
+            <span *ngIf="community.icon == null" class="community-img-40"
+              >{{community.abbv}}</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="mechachat-app-sidebar-communities-shadow"></div>
+    </div>
+
+    <div class="mechachat-app-sidebar-controls">
+      <div class="community-container-separator"></div>
+
+      <div
+        class="community"
+        matTooltip="More Actions"
+        matTooltipClass="more-actions-btn-tooltip"
+        matTooltipPosition="left"
+        [matMenuTriggerFor]="sidebarActionsMenu"
+        (menuOpened)="toggleSidebarOpenIcon()"
+        (menuClosed)="toggleSidebarCloseIcon()"
+      >
+        <span class="community-action-icon material-icons-outlined">
+          {{this.sidebarActionsMenuIcon}}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <mat-menu
+    #sidebarActionsMenu="matMenu"
+    class="sidebar-actions-list"
+    yPosition="below"
+  >
+    <button mat-menu-item (click)="openAddACommunityDialog()">
+      <span class="material-icons"> add_circle_outline </span> &nbsp; Add a
+      Community
+    </button>
+    <button mat-menu-item [disabled]="true">
+      <span class="material-icons"> smart_toy </span> &nbsp; Bot Discovery
+    </button>
+    <button mat-menu-item [disabled]="true">
+      <span class="material-icons"> explore </span> &nbsp; Public Communities
+    </button>
+  </mat-menu>
+
+  <div class="mechachat-app-body">
+    <ng-content></ng-content>
+  </div>
+</div>
+>>>>>>> 651e671 (Update design + Start of communties)

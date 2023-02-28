@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-repeat: no-repeat;
   background-size: cover;
@@ -322,3 +323,382 @@ html[class=cdk-global-scrollblock] {
   height: calc(100vh - 53px) !important;
   width: calc(100vw - 70px) !important;
 }
+=======
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden !important;
+}
+
+.container-fluid {
+  position: relative;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+.mechachat-app-topbar {
+  position: relative;
+  background-color: var(--app-topbar-background);
+  right: 70px;
+  top: 0px;
+  width: calc(100vw);
+  height: 53px;
+
+  border-bottom-color: var(--app-topbar-border);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+html[class="cdk-global-scrollblock"] {
+  overflow: hidden;
+  overscroll-behavior: hidden;
+}
+
+.btn-blue {
+  color: hsla(206, 85.6%, 64.7%, 0.95);
+}
+
+.btn-red {
+  color: rgb(233, 59, 59);
+}
+
+.mechachat-app-topbar-left {
+  position: fixed;
+  height: 53px;
+  float: left;
+  width: auto !important;
+  min-width: 240px !important;
+  margin-left: 70px !important;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.mechachat-app-topbar-left:hover {
+  background-color: var(--app-topbar-hover-background);
+
+  border-right-color: var(--app-topbar-hover-border);
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+.mechachat-app-topbar-left-avatar {
+  position: relative;
+  top: 4.4px;
+  float: left;
+}
+
+.mechachat-app-topbar-left-name {
+  position: relative;
+  top: 7.2px;
+  font-size: 14px;
+  float: end;
+  text-align: left;
+  padding-right: 10px !important;
+  left: 10px;
+  font-family: TruenoRegular;
+}
+
+.my-user-profile-dropdown {
+  position: relative;
+  width: 243px !important;
+  top: 5px;
+  left: 5px;
+  max-width: unset !important;
+  background-color: var(--app-user-profile-dropdown-background);
+  box-shadow: transparent;
+  border: solid 1px var(--app-user-profile-dropdown-shadow);
+  border-bottom: solid 1px var(--app-user-profile-dropdown-shadow);
+}
+
+.my-user-profile-dropdown [mat-menu-item] {
+  font-size: 13px;
+  font-family: TruenoLight !important;
+}
+
+.my-user-profile-dropdown [mat-menu-item] span {
+  vertical-align: sub;
+  font-size: 20px;
+}
+
+.mechachat-app-topbar-left-name-discrim {
+  position: relative;
+  color: var(--app-topbar-custom-message-text);
+  text-align: left;
+  left: 0px;
+  margin-top: 0px;
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
+  font-family: TruenoUltralight;
+  width: 190px !important;
+  white-space: nowrap;
+  max-width: 190px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  letter-spacing: 1px;
+}
+
+.mechachat-app-topbar-right {
+  position: relative;
+  float: right;
+  right: 0px;
+  height: 53px;
+  width: auto;
+  background-color: var(--app-topbar-background);
+}
+
+.mechachat-app-topbar-right-btn {
+  position: relative;
+  text-decoration: none !important;
+  right: 5px !important;
+  top: 8.5px;
+  font-family: TruenoBold;
+}
+
+.mechachat-app-sidebar-top {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 70px;
+  height: 53px;
+  box-sizing: border-box;
+}
+
+.mechachat-app-home-dashboard-btn {
+  position: absolute;
+  width: 45px;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+}
+
+.mechachat-app-sidebar-top:hover .mechachat-app-home-dashboard-btn {
+  filter: drop-shadow(1px 0 0 rgba(70, 150, 240, 1))
+    drop-shadow(0 1px 0 rgba(70, 150, 240, 1))
+    drop-shadow(-1px 0 0 rgba(70, 150, 240, 1))
+    drop-shadow(0 -1px 0 rgba(70, 150, 240, 1));
+}
+
+.mechachat-app-sidebar-top-separator {
+  position: absolute;
+  top: 50px;
+}
+
+.mechachat-app-sidebar-communities .community-container-separator {
+  position: absolute;
+  left: -15px !important;
+  top: 0px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mechachat-app-sidebar {
+  background-color: var(--app-sidebar-background);
+}
+
+#mechachat-root.is_browser .mechachat-app-sidebar {
+  position: fixed;
+  float: right;
+  margin-right: 0px;
+  margin-left: 1px;
+  right: 0px;
+  top: 0px;
+  width: 70px;
+  height: 100%;
+}
+
+#mechachat-root.is_windows .mechachat-app-sidebar {
+  position: fixed;
+  float: right;
+  margin-right: 0px;
+  margin-left: 1px;
+  right: 0px;
+  top: 25px;
+  width: 70px;
+  height: 100%;
+}
+
+#mechachat-root.is_macos .mechachat-app-sidebar {
+  position: fixed;
+  float: right;
+  margin-right: 0px;
+  margin-left: 1px;
+  right: 0px;
+  top: 25px;
+  width: 70px;
+  height: 100%;
+}
+
+.mechachat-app-sidebar-communities {
+  position: absolute;
+  top: 53px;
+
+  border-left-color: var(--app-sidebar-border);
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+#mechachat-root.is_windows .mechachat-app-sidebar-communities-list {
+  position: relative;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: auto !important;
+  max-height: calc(100vh - 105px - 37px);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  height: calc(100vh - 105px - 37px);
+}
+
+#mechachat-root.is_macos .mechachat-app-sidebar-communities-list {
+  position: relative;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: auto !important;
+  max-height: calc(100vh - 105px - 37px);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  height: calc(100vh - 105px - 37px);
+}
+
+#mechachat-root.is_browser .mechachat-app-sidebar-communities-list {
+  position: relative;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: auto !important;
+  max-height: calc(100vh - 105px - 12px);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  height: calc(100vh - 105px - 12px);
+}
+
+.mechachat-app-sidebar-communities-list-shadow {
+  contain: unset;
+}
+
+.mechachat-app-sidebar-communities-list-shadow::before {
+  content: "";
+  position: fixed;
+  bottom: 62px;
+  width: 72px;
+  height: 15px;
+  background: linear-gradient(transparent, var(--app-sidebar-shadow));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mechachat-app-sidebar-communities-list::-webkit-scrollbar {
+  display: none;
+}
+
+.mechachat-app-sidebar-controls {
+  position: fixed;
+  height: 64px;
+  min-height: 64px;
+  max-height: 64px;
+  bottom: 0px;
+  z-index: 2;
+
+  border-left-color: var(--app-sidebar-border);
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+.sidebar-actions-list {
+  position: relative;
+  width: auto !important;
+  margin-bottom: -52px !important;
+  margin-right: 65px;
+  max-width: unset !important;
+  background-color: var(--app-user-profile-dropdown-background);
+  box-shadow: transparent;
+  border: solid 1px var(--app-user-profile-dropdown-shadow);
+  border-bottom: solid 1px var(--app-user-profile-dropdown-shadow);
+}
+
+.sidebar-actions-list [mat-menu-item] {
+  font-size: 13px;
+  font-family: TruenoLight !important;
+}
+
+.sidebar-actions-list [mat-menu-item] span {
+  vertical-align: sub;
+  font-size: 20px;
+}
+
+.mechachat-app-home-dashboard-btn-tooltip {
+  position: absolute;
+  right: -12px;
+  top: -30px;
+  float: left;
+}
+
+.mechachat-app-home-pill-tooltip {
+  position: relative;
+}
+
+.mechachat-app-home-pill-tooltip-msg {
+  position: relative;
+  margin-right: 0px !important;
+  top: 5px !important;
+  font-family: TruenoBold;
+}
+
+.my-avatar-img-40-mood-tooltip {
+  position: relative;
+  top: -5px;
+  font-size: 13.5px !important;
+  background-color: var(--app-tooltip-background) !important;
+}
+
+.community {
+  position: relative;
+  display: flex;
+  margin-left: 10px !important;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.more-actions-btn-tooltip {
+  position: relative;
+  bottom: -15px !important;
+}
+
+.mechachat-app-home-community-tooltip {
+  position: relative;
+}
+
+.mechachat-app-home-community-tooltip-msg {
+  position: fixed;
+  z-index: 30;
+  right: 20px !important;
+  top: 5px !important;
+  font-family: TruenoBold;
+}
+
+.mechachat-app-body {
+  position: relative !important;
+  overflow: hidden !important;
+  right: 0px !important;
+  float: left;
+  top: 0px !important;
+  height: calc(100vh - 53px) !important;
+  width: calc(100vw - 70px) !important;
+}
+>>>>>>> 651e671 (Update design + Start of communties)

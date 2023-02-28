@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-image: url(/assets/Root/background-img.jpg) !important;
     background-repeat: no-repeat;
@@ -210,4 +211,218 @@ input:-webkit-autofill{
         top: 50% !important;
         transform: translateY(-50%) !important;
     }
+=======
+body {
+    background-image: url("https://res.cloudinary.com/mechachat/image/upload/v1670291909/MechaChat%20Solutions/assets/background-img.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: white !important;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px !important;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-color: #333333;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+
+.brand-logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: auto;
+}
+
+.form {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.full-item {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80% !important;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.form-item {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80% !important;
+    font-size: 17px;
+    color: white !important;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    position: relative;
+    width: 100% !important;
+    left: 10% !important;
+}
+
+.button {
+    width: 180px !important;
+    color: white !important;
+    display: inline-block !important;
+}
+
+.form-submit {
+    background-color: rgb(36, 138, 255) !important;
+}
+
+.loginBtn {
+    float: right;
+    right: 20% !important;
+}
+
+.genderIcon {
+    position: absolute;
+    bottom: -3px;
+}
+
+.genderSpan {
+    margin-left: 28px;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .form-item {
+        width: 80% !important;
+    }
+
+    .center-content {
+        position: relative;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+
+    .button {
+        width: 135px !important;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .container {
+        width: 100% !important;
+        height: 100% !important;
+        top: 250px !important;
+    }
+
+    .brand-logo {
+        display: block !important;
+    }
+
+    .form {
+        position: relative;
+        margin-top: 15px !important;
+        padding: 0px !important;
+    }
+
+    .center-content {
+        position: relative;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+}
+
+@media screen and (max-height: 516px) {
+    .container {
+        width: 100% !important;
+        height: 516px !important;
+        top: 255px !important;
+    }
+
+    .brand-logo {
+        display: none !important;
+    }
+
+    .form {
+        position: relative;
+        margin-top: -15px !important;
+        padding: 0px !important;
+    }
+
+    .center-content {
+        position: relative;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+}
+
+@media screen and (max-height: 516px) {
+    .container {
+        width: 100% !important;
+        height: 516px !important;
+        top: 255px !important;
+    }
+
+    .brand-logo {
+        display: none !important;
+    }
+
+    .form {
+        position: relative;
+        margin-top: -15px !important;
+        padding: 0px !important;
+    }
+
+    .center-content {
+        position: relative;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .container {
+        width: 100% !important;
+        height: 100vw !important;
+        overflow-y: scroll !important;
+    }
+
+    .brand-logo {
+        display: none !important;
+    }
+
+    .form {
+        position: relative;
+        margin-top: -30px !important;
+        padding: 0px !important;
+    }
+
+    .center-content {
+        position: relative;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+>>>>>>> 651e671 (Update design + Start of communties)
 }

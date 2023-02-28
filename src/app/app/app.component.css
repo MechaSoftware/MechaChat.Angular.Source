@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 .container {
     background-image: url("/Assets/Themes/Default/DefaultThemeWhite.png") !important;
+=======
+.container {
+    background-image: url("https://res.cloudinary.com/mechachat/image/upload/v1670290856/MechaChat%20Solutions/assets/themes/default/DefaultThemeGrey.png") !important;
+>>>>>>> 651e671 (Update design + Start of communties)
 }
