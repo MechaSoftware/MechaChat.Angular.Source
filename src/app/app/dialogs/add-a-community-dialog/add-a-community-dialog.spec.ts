@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AddACommunityDialog } from "./add-a-community-dialog.component";
+import { AddACommunityDialog } from "./add-a-community-dialog";
 
 describe("AddACommunityDialog", () => {
   let component: AddACommunityDialog;

@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './theme-appearance.component.html',
   styleUrls: ['./theme-appearance.component.css']
 })
-export class ThemeAppearanceComponent implements OnInit {
+export class ThemeAppearance implements OnInit {
   selectedColorTheme: any = null;
 
   colorThemes: any[] = [
@@ -91,78 +91,46 @@ export class ThemeAppearanceComponent implements OnInit {
 
     if (theme == 'grey') {
       bodyElement.style.backgroundImage =
-<<<<<<< HEAD
-        'url(/assets/App/Themes/Default/DefaultThemeGrey.png)';
-=======
         'url("https://res.cloudinary.com/mechachat/image/upload/v1670290857/MechaChat%20Solutions/assets/themes/default/DefaultThemeGrey.png")';
->>>>>>> 651e671 (Update design + Start of communties)
 
         htmlElement.setAttribute("data-theme", "grey");
     } else if (theme == 'blue') {
       bodyElement.style.backgroundImage =
-<<<<<<< HEAD
-        'url(/assets/App/Themes/Default/DefaultThemeBlue.png)';
-=======
         'url("https://res.cloudinary.com/mechachat/image/upload/v1670290857/MechaChat%20Solutions/assets/themes/default/DefaultThemeBlue.png")';
->>>>>>> 651e671 (Update design + Start of communties)
 
         htmlElement.setAttribute("data-theme", "blue");
     } else if (theme == 'green') {
       bodyElement.style.backgroundImage =
-<<<<<<< HEAD
-        'url(/assets/App/Themes/Default/DefaultThemeGreen.png)';
-=======
         'url("https://res.cloudinary.com/mechachat/image/upload/v1670290857/MechaChat%20Solutions/assets/themes/default/DefaultThemeGreen.png")';
->>>>>>> 651e671 (Update design + Start of communties)
 
         htmlElement.setAttribute("data-theme", "green");
     } else if (theme == 'orange') {
       bodyElement.style.backgroundImage =
-<<<<<<< HEAD
-        'url(/assets/App/Themes/Default/DefaultThemeOrange.png)';
-=======
         'url("https://res.cloudinary.com/mechachat/image/upload/v1670290857/MechaChat%20Solutions/assets/themes/default/DefaultThemeOrange.png")';
->>>>>>> 651e671 (Update design + Start of communties)
 
         htmlElement.setAttribute("data-theme", "orange");
     } else if (theme == 'purple') {
       bodyElement.style.backgroundImage =
-<<<<<<< HEAD
-        'url(/assets/App/Themes/Default/DefaultThemePurple.png)';
-=======
         'url("https://res.cloudinary.com/mechachat/image/upload/v1670290857/MechaChat%20Solutions/assets/themes/default/DefaultThemePurple.png")';
->>>>>>> 651e671 (Update design + Start of communties)
 
         htmlElement.setAttribute("data-theme", "purple");
     } else if (theme == 'red') {
       bodyElement.style.backgroundImage =
-<<<<<<< HEAD
-        'url(/assets/App/Themes/Default/DefaultThemeRed.png)';
-=======
         'url("https://res.cloudinary.com/mechachat/image/upload/v1670290857/MechaChat%20Solutions/assets/themes/default/DefaultThemeRed.png")';
->>>>>>> 651e671 (Update design + Start of communties)
 
         htmlElement.setAttribute("data-theme", "red");
     } else if (theme == 'yellow') {
       bodyElement.style.backgroundImage =
-<<<<<<< HEAD
-        'url(/assets/App/Themes/Default/DefaultThemeYellow.png)';
-=======
         'url("https://res.cloudinary.com/mechachat/image/upload/v1670290857/MechaChat%20Solutions/assets/themes/default/DefaultThemeYellow.png")';
->>>>>>> 651e671 (Update design + Start of communties)
 
         htmlElement.setAttribute("data-theme", "yellow");
     }
 
-<<<<<<< HEAD
-    await this.httpService.sendPostAsync("user/update/theme/default", userThemeData).then((response) => {
-=======
     await this.httpService.sendPostAsync("user/update/theme/default", userThemeData, {
       headers: {
         Authorization: `User ${this.authService.getTokens().accesstoken}`,
       }
     }).then((response) => {
->>>>>>> 651e671 (Update design + Start of communties)
       this.toastr.success(`Theme Updated!`, 'Success');
     });
   }
