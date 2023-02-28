@@ -3,15 +3,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "types": [ "node" ]
-=======
-    "types": []
->>>>>>> 33f497f (initial commit)
-=======
-    "types": [ "node" ]
->>>>>>> 651e671 (Update design + Start of communties)
   },
   "files": [
     "src/main.ts",

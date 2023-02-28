@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import 'zone.js/dist/zone-node';
-
-import { ngExpressEngine } from '@nguniversal/express-engine';
-import * as express from 'express';
-import { join } from 'path';
-
-import { AppServerModule } from './src/main.server';
-import { APP_BASE_HREF } from '@angular/common';
-import { existsSync } from 'fs';
-=======
 import "zone.js/dist/zone-node";
 import "localstorage-polyfill";
 
@@ -32,23 +21,10 @@ global["navigator"] = mock.getNavigator();
 global["window"] = mock.getWindow();
 global["XMLHttpRequest"] = require("xmlhttprequest").XMLHttpRequest;
 global["localStorage"] = localStorage;
->>>>>>> 651e671 (Update design + Start of communties)
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-<<<<<<< HEAD
-  const distFolder = join(process.cwd(), 'dist/app/browser');
-  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
-
-  // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-  server.engine('html', ngExpressEngine({
-    bootstrap: AppServerModule,
-  }));
-
-  server.set('view engine', 'html');
-  server.set('views', distFolder);
-=======
   const distFolder = join(process.cwd(), "dist/app/browser");
   const indexHtml = existsSync(join(distFolder, "index.original.html"))
     ? "index.original.html"
@@ -64,20 +40,10 @@ export function app(): express.Express {
 
   server.set("view engine", "html");
   server.set("views", distFolder);
->>>>>>> 651e671 (Update design + Start of communties)
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
-<<<<<<< HEAD
-  server.get('*.*', express.static(distFolder, {
-    maxAge: '1y'
-  }));
-
-  // All regular routes use the Universal engine
-  server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
-=======
   server.get(
     "*.*",
     express.static(distFolder, {
@@ -91,18 +57,13 @@ export function app(): express.Express {
       req,
       providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }],
     });
->>>>>>> 651e671 (Update design + Start of communties)
   });
 
   return server;
 }
 
 function run(): void {
-<<<<<<< HEAD
-  const port = process.env['PORT'] || 4000;
-=======
   const port = process.env["PORT"] || 52451;
->>>>>>> 651e671 (Update design + Start of communties)
 
   // Start up the Node server
   const server = app();
@@ -116,18 +77,9 @@ function run(): void {
 // The below code is to ensure that the server is run only when not requiring the bundle.
 declare const __non_webpack_require__: NodeRequire;
 const mainModule = __non_webpack_require__.main;
-<<<<<<< HEAD
-const moduleFilename = mainModule && mainModule.filename || '';
-if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
-  run();
-}
-
-export * from './src/main.server';
-=======
 const moduleFilename = (mainModule && mainModule.filename) || "";
 if (moduleFilename === __filename || moduleFilename.includes("iisnode")) {
   run();
 }
 
 export * from "./src/main.server";
->>>>>>> 651e671 (Update design + Start of communties)

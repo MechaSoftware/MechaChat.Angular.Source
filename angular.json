@@ -5,54 +5,22 @@
   "projects": {
     "app": {
       "projectType": "application",
-<<<<<<< HEAD
-<<<<<<< HEAD
       "schematics": {},
-=======
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
->>>>>>> 33f497f (initial commit)
-=======
-      "schematics": {},
->>>>>>> 651e671 (Update design + Start of communties)
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-<<<<<<< HEAD
-<<<<<<< HEAD
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
               "path": "./webpack.config.js"
             },
-            "outputPath": "dist/app/browser",
-=======
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
             "outputPath": "dist/app",
->>>>>>> 33f497f (initial commit)
-=======
-          "builder": "@angular-builders/custom-webpack:browser",
-          "options": {
-            "customWebpackConfig": {
-              "path": "./webpack.config.js"
-            },
-            "outputPath": "dist/app/browser",
->>>>>>> 651e671 (Update design + Start of communties)
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-<<<<<<< HEAD
-<<<<<<< HEAD
             "inlineStyleLanguage": "css",
             "assets": [
               "src/assets"
@@ -61,50 +29,17 @@
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css",
               "node_modules/ngx-toastr/toastr.css"
-=======
-            "inlineStyleLanguage": "scss",
-=======
-            "inlineStyleLanguage": "css",
->>>>>>> 651e671 (Update design + Start of communties)
-            "assets": [
-              "src/assets"
-            ],
-            "styles": [
-<<<<<<< HEAD
-              "src/styles.scss"
->>>>>>> 33f497f (initial commit)
-=======
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
-              "src/styles.css",
-              "node_modules/ngx-toastr/toastr.css"
->>>>>>> 651e671 (Update design + Start of communties)
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
-<<<<<<< HEAD
-=======
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ],
->>>>>>> 33f497f (initial commit)
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-<<<<<<< HEAD
               "optimization": false,
               "outputHashing": "all",
               "sourceMap": true,
@@ -120,24 +55,15 @@
                   "maximumError": "200mb"
                 }
               ]
-=======
-              "outputHashing": "all"
->>>>>>> 33f497f (initial commit)
             },
             "development": {
               "buildOptimizer": false,
-              "optimization": {
-                "scripts": false,
-                "styles": false,
-                "fonts": false
-              },
+              "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
           }
         },
         "serve": {
@@ -153,32 +79,6 @@
               "proxyConfig": "proxy-prod.conf.json"
             }
           }
-=======
-          },
-          "defaultConfiguration": "production"
-=======
-          }
->>>>>>> 651e671 (Update design + Start of communties)
-        },
-        "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
-          "options": {
-            "host": "0.0.0.0",
-            "browserTarget": "app:build",
-            "proxyConfig": "proxy-local.conf.json"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "app:build",
-              "proxyConfig": "proxy-prod.conf.json"
-            }
-<<<<<<< HEAD
-          },
-          "defaultConfiguration": "development"
->>>>>>> 33f497f (initial commit)
-=======
-          }
->>>>>>> 651e671 (Update design + Start of communties)
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -193,22 +93,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-<<<<<<< HEAD
-<<<<<<< HEAD
             "inlineStyleLanguage": "css",
-=======
-            "inlineStyleLanguage": "scss",
->>>>>>> 33f497f (initial commit)
-=======
-            "inlineStyleLanguage": "css",
->>>>>>> 651e671 (Update design + Start of communties)
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
-<<<<<<< HEAD
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
@@ -283,16 +173,6 @@
             }
           },
           "defaultConfiguration": "production"
-=======
-              "src/styles.scss"
-=======
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.css"
->>>>>>> 651e671 (Update design + Start of communties)
-            ],
-            "scripts": []
-          }
->>>>>>> 33f497f (initial commit)
         }
       }
     }

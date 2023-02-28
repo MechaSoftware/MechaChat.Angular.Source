@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "start": "ng serve --proxy-config proxy-local.conf.json",
     "build": "ng build --configuration='production'",
     "watch": "ng build --watch --configuration development",
@@ -92,109 +90,5 @@
   },
   "browser": {
     "crypto": false
-=======
-    "start": "ng serve",
-    "build": "ng build",
-=======
-    "start": "ng serve --proxy-config proxy-local.conf.json",
-    "build": "ng build --configuration='production'",
->>>>>>> 651e671 (Update design + Start of communties)
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "dev:ssr": "ng run app:serve-ssr",
-    "serve:ssr": "node dist/app/server/main.js",
-    "build:ssr": "ng build && ng run app:server",
-    "prerender": "ng run app:prerender"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^13.3.2",
-    "@angular/cdk": "^13.3.9",
-    "@angular/cli": "^15.0.5",
-    "@angular/common": "^13.3.2",
-    "@angular/compiler": "^13.3.2",
-    "@angular/core": "^13.3.2",
-    "@angular/flex-layout": "^13.0.0-beta.38",
-    "@angular/forms": "~13.3.2",
-    "@angular/material": "^13.3.9",
-    "@angular/platform-browser": "~13.3.2",
-    "@angular/platform-browser-dynamic": "~13.3.2",
-    "@angular/platform-server": "^13.3.2",
-    "@angular/router": "~13.3.2",
-    "@emoji-mart/data": "^1.0.6",
-    "@nguniversal/express-engine": "^13.1.0",
-    "@nxext/angular": "^13.0.0-alpha.2",
-    "@teambit/component.ui.component-tooltip": "^0.0.493",
-    "@types/axios": "^0.14.0",
-    "@types/md5": "^2.3.2",
-    "angular": "^1.8.2",
-    "angular-md5": "^0.1.10",
-    "axios": "^0.26.1",
-    "bcryptjs": "^2.4.3",
-    "clipboard": "^2.0.11",
-    "emoji-mart": "^5.2.2",
-    "express": "^4.15.2",
-    "faye-websocket": "^0.11.4",
-    "foundation-sites": "^6.7.4",
-    "localstorage-polyfill": "^1.0.1",
-    "ng-http-loader": "^11.0.1",
-    "ngx-build-plus": "^14.0.0",
-    "ngx-toastr": "^14.2.3",
-    "rxjs": "~7.5.5",
-    "ts-md5": "^1.2.11",
-    "tslib": "^2.3.1",
-    "twemoji": "^14.0.2",
-    "zone.js": "~0.11.5"
-  },
-  "devDependencies": {
-    "@angular-builders/custom-webpack": "^13.1.0",
-    "@angular-devkit/build-angular": "^13.3.2",
-    "@angular/compiler-cli": "~13.3.2",
-    "@nguniversal/builders": "^13.1.0",
-    "@swc/core": "^1.3.4",
-    "@types/bcryptjs": "^2.4.2",
-    "@types/express": "^4.17.0",
-    "@types/file-saver": "^2.0.5",
-    "@types/jasmine": "~4.0.2",
-    "@types/jquery": "^3.5.14",
-    "@types/node": "^17.0.45",
-    "autoprefixer": "^10.4.4",
-    "bufferutil": "^4.0.7",
-    "crypto": "^1.0.1",
-    "crypto-browserify": "^3.12.0",
-    "css-loader": "^6.7.1",
-    "file-saver": "^2.0.5",
-    "jasmine-core": "~4.0.1",
-    "karma": "~6.3.17",
-    "karma-chrome-launcher": "~3.1.1",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~4.0.2",
-    "karma-jasmine-html-reporter": "~1.7.0",
-<<<<<<< HEAD
-    "typescript": "~4.5.2"
->>>>>>> 33f497f (initial commit)
-=======
-    "lodash": "^4.17.21",
-    "mangle-css-class-webpack-plugin": "^5.0.8",
-    "mock-browser": "^0.92.14",
-    "postcss": "^8.4.12",
-    "postcss-modules": "^4.3.1",
-    "posthtml-css-modules": "^0.1.3",
-    "posthtml-loader": "^2.0.1",
-    "raw-loader": "^4.0.2",
-    "simplify-css-modules-webpack-plugin": "^1.1.0",
-    "swc-loader": "^0.2.3",
-    "tailwindcss": "^3.0.23",
-    "typescript": "~4.6.3",
-    "typescript-plugin-css-modules": "^3.4.0",
-    "utf-8-validate": "^5.0.10",
-    "webpack": "^5.74.0",
-    "webpack-merge": "^5.8.0",
-    "webpack-obfuscator": "^3.5.1",
-    "xmlhttprequest": "^1.8.0"
-  },
-  "browser": {
-    "crypto": false
->>>>>>> 651e671 (Update design + Start of communties)
   }
 }
