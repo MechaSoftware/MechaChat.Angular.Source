@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MechaChat Angular App Source Code
 UNDER DEVELOPMENT
 #
